@@ -36,8 +36,8 @@ Log intro your **VPS** using **[www.putty.org](http://www.putty.org)** or any ot
 ````js
 cd
 wget "https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/mn-easy-install.sh"
-sudo chmod 755 mn_easy_install.sh
-sudo bash mn_easy_install.sh
+sudo chmod 755 mn-easy-install.sh
+sudo bash mn-easy-install.sh
 ````
 
 Now grab a coffee :coffee: or whatever beverage you preffer and wait for the **easy install script** to do it's **magic**. 
