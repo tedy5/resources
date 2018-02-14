@@ -101,6 +101,7 @@ installDependencies() {
     sudo apt-get install libdb4.8-dev libdb4.8++-dev -qq -y > /dev/null 2>&1
     sudo apt-get install libminiupnpc-dev -qq -y > /dev/null 2>&1
     sudo apt-get install libzmq5 -qq -y > /dev/null 2>&1
+    sudo apt-get install virtualenv -qq -y > /dev/null 2>&1
     echo -e "${NONE}${GREEN}* Done${NONE}";
 }
 
@@ -130,7 +131,7 @@ installWallet() {
     sudo mv $COINTX /usr/bin
     cd && sudo rm -rf codesrc
     #Create sh in /usr/bin for getinfo for cli getinfo
-    sudo cd /usr/bin
+    cd /usr/bin
     wget https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/nihilo-utilities.sh
     sudo mv nihilo-utilities.sh nihilo
     sudo chmod 755 nihilo
