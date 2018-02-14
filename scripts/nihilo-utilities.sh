@@ -61,10 +61,6 @@ ViewSentinelLogFile() {
     sudo nano ~/sentinel.log
 }
 
-RunSentinelTest() {
-    cd ~/.nihilocore/sentinel && ./venv/bin/py.test ./test
-}
-
 StartWalletDaemon() {
     nihilod -daemon
     sleep 5
@@ -85,9 +81,8 @@ echo -e "${CYAN}[3]${NONE} Masternode status"
 echo -e "${CYAN}[4]${NONE} Reindex wallet"
 echo -e "${CYAN}[5]${NONE} Edit wallet config"
 echo -e "${CYAN}[6]${NONE} View sentinel log file"
-echo -e "${CYAN}[7]${NONE} Run sentinel test"
-echo -e "${CYAN}[8]${NONE} Start wallet daemon"
-echo -e "${CYAN}[9]${NONE} Stop wallet daemon"
+echo -e "${CYAN}[7]${NONE} Start wallet daemon"
+echo -e "${CYAN}[8]${NONE} Stop wallet daemon"
 echo
 
 echo -e "${BOLD}What would you like me to do?${NONE}"
@@ -101,7 +96,6 @@ case "$response" in
     ("4") ReindexWallet ;;
     ("5") EditWalletConfig ;;
     ("6") ViewSentinelLogFile ;;
-    ("7") RunSentinelTest ;;
-    ("8") StartWalletDaemon ;;
-    ("9") StopWalletDaemon ;;
+    ("7") StartWalletDaemon ;;
+    ("8") StopWalletDaemon ;;
 esac
