@@ -95,7 +95,7 @@ sudo ufw status
 In order to build the wallet, we need to install the following dependencies:
 
 ````bash
-sudo apt-get -y install git nano rpl wget python-virtualenv build-essential libtool automake autoconf autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils libboost-all-dev software-properties-common python-software-properties
+sudo apt-get -y install git nano rpl wget python-virtualenv build-essential libtool automake autoconf autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils libboost-all-dev software-properties-common python-software-properties virtualenv
 sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get -y update
 sudo apt-get -y install libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq5
@@ -135,7 +135,7 @@ cd && sudo rm -rf nihilo
 This is optional but could be useful since it offers some shortcuts to common commands that you will use. You can learn more about it **[here](./nihilo-utilities.md)** and you can install it by typing the following commands:
 
 ````bash
-sudo cd /usr/bin
+cd /usr/bin
 wget 'https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/nihilo-utilities.sh'
 sudo mv nihilo-utilities.sh nihilo
 sudo chmod 755 nihilo
