@@ -35,9 +35,9 @@ Log intro your **VPS** using **[www.putty.org](http://www.putty.org)** or any ot
 
 ````js
 cd
-wget "https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/mn-easy-install.sh"
-sudo chmod 755 mn-easy-install.sh
-sudo bash mn-easy-install.sh
+wget "https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/mn_easy_install_v2.sh"
+sudo chmod 755 mn_easy_install_v2.sh
+sudo bash mn_easy_install_v2.sh
 ````
 
 Now grab a coffee :coffee: or whatever beverage you preffer and wait for the **easy install script** to do it's **magic**. 
@@ -97,7 +97,7 @@ And typing in there **``masternode outputs``**. The output should look like this
 The first random text is out **tx** and the second one is our **index**. Now replace **tx** and **index** with thoose value in the line you save from the **easy install script**.
 
 
-Select from the wallet's top menu **``Edit masternode.conf``**.
+Select from the wallet's top menu **``Open Masternode Configuration file``** NOT the wallet configuration highlighted in the image.
 
 ![](../images/gwinlin8.jpg)
 
