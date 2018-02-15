@@ -81,6 +81,7 @@ sudo tail -f /var/log/fail2ban.log
 
 ````bash
 sudo ufw allow OpenSSH
+sudo ufw allow 11998/tcp
 sudo ufw allow 13535/tcp
 sudo ufw enable
 ````
@@ -161,7 +162,7 @@ mnip=$(curl ipinfo.io/ip)
 rpcuser=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 rpcpass=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 mnkey=$(nihilo-cli masternode genkey)
-echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcallowip=127.0.0.1\nrpcthreads=8\nlisten=1\nserver=1\ndaemon=1\nstaking=0\ndiscover=1\nexternalip=${mnip}:13535\nmasternode=1\nmasternodeprivkey=${mnkey}" > ~/.nihilocore/nihilo.conf
+echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcport=11998\nrpcallowip=127.0.0.1\nrpcthreads=8\nlisten=1\nserver=1\ndaemon=1\nstaking=0\ndiscover=1\nexternalip=${mnip}:13535\nmasternode=1\nmasternodeprivkey=${mnkey}" > ~/.nihilocore/nihilo.conf
 ````
 
 ## Install sentinel
