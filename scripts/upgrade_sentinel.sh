@@ -15,6 +15,8 @@ nihilo-cli stop > /dev/null 2>&1
 sleep 5
 echo -e "${GREEN}* Done${NONE}";
 
+ufw allow 11998/tcp
+
 #Replace port
 echo && echo 'Replacing port'
 cd ~/.nihilocore
