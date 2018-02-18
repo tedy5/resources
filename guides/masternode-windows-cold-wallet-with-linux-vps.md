@@ -23,7 +23,7 @@ Even is this guide is designed for **Windows Cold Wallet** it should also work f
 - **Windows** computer with a **ssh client** installed ( **[www.putty.org](http://www.putty.org)** is recommended )
 
 ## Linux VPS Setup
-In order do proceed with this step you need to have acces to a **Linux VPS** running **Ubuntu 16.04** operating sistem. If you don't already have a **VPS** we recommend you get the **5$** one from **[www.vultr.com](https://www.vultr.com)**, one of the advantages of **Vultr** is that you can also pay with **BTC**.
+In order do proceed with this step you need to have acces to a **Linux VPS** running **Ubuntu 16.04** operating sistem. If you don't already have a **VPS** we recommend you get the **10$** one from **[www.vultr.com](https://www.vultr.com)**, one of the advantages of **Vultr** is that you can also pay with **BTC**.
 
 We provide 2 methods of setting up the **Linux VPS** part of a **Nihilo Masternode**, a **[manual](./linux-masternode-manual-setup.md)** one where you need to install all the required dependecies and configure some files and an **[easy install script](#easy-install-script)** that does everything for you. We recommend you use the **[easy install script](#easy-install-script)**.
 
