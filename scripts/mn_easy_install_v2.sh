@@ -10,7 +10,7 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 MAX=12
 
-COINGITHUB=https://github.com/nihilocoin/nihilo/releases/download/1.0.1/Nihilo_Command_Line_Binaries_Linux_1_0_1.tar.gz
+COINGITHUB=https://github.com/nihilocoin/nihilo/releases/download/1.0.2/Nihilo_Command_Line_Binaries_Linux_1_0_2.tar.gz
 SENTINELGITHUB=https://github.com/nihilocoin/sentinel.git
 COINPORT=13535
 COINRPCPORT=11998
@@ -112,7 +112,7 @@ compileWallet() {
     cd && mkdir new && cd new
 
     wget $COINGITHUB
-    tar -xf Nihilo_Command_Line_Binaries_Linux_1_0_1.tar.gz
+    tar -xf Nihilo_Command_Line_Binaries_Linux_1_0_2.tar.gz
     
     echo -e "${NONE}${GREEN}* Done${NONE}";
 }
