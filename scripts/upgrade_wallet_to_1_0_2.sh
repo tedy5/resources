@@ -11,7 +11,7 @@ UNDERLINE='\033[4m'
 
 shutDownWallet() {
     #Shut down wallet daemon
-    echo && echo 'Shuting down wallet daemon'
+    echo && echo '[1/5] Shuting down wallet daemon'
     nihilo-cli stop > /dev/null 2>&1
     sleep 5
     echo -e "${GREEN}* Done${NONE}";
@@ -19,7 +19,7 @@ shutDownWallet() {
 
 downloadNewWallet() {
     #Download new wallet
-    echo && echo 'Downloading new wallet'
+    echo && echo '[2/5] Downloading new wallet'
     wget https://github.com/nihilocoin/nihilo/releases/download/1.0.2/Nihilo_Command_Line_Binaries_Linux_1_0_2.tar.gz
     tar -xf Nihilo_Command_Line_Binaries_Linux_1_0_2.tar.gz
     echo -e "${GREEN}* Done${NONE}"; 
@@ -27,7 +27,7 @@ downloadNewWallet() {
 
 installNewWallet() {
     #Install new wallet
-    echo && echo 'Installing new wallet'
+    echo && echo '[3/5] Installing new wallet'
     cd /usr/bin
     sudo rm -rf nihilod nihilo-cli nihilo-tx
     cd
@@ -36,7 +36,7 @@ installNewWallet() {
 
 reindexWallet() {
     #Reindexing wallet
-    echo && echo 'Reindexing wallet'
+    echo && echo '[4/5] Reindexing wallet'
     cd ~/.nihilocore
     sudo rm governance.dat
     sudo rm netfulfilled.dat
@@ -53,11 +53,11 @@ reindexWallet() {
 
 startWallet() {
     #starting wallet
-    echo && echo 'Starting wallet daemon...'
+    echo && echo '[5/5] Starting wallet daemon...'
     nihilod -daemon > /dev/null 2>&1
     sleep 5
     echo -e "${GREEN}* Done${NONE}";
-    echo 'Waiting for wallet to sync. It will take a while, you can go grab a coffee :)'
+    echo && echo 'Waiting for wallet to sync. It will take a while, you can go grab a coffee :)'
     until nihilo-cli mnsync status | grep -m 1 '"IsBlockchainSynced": true'; do sleep 1 ; done > /dev/null 2>&1
     echo -e "${GREEN}* Blockchain Synced${NONE}";
     until nihilo-cli mnsync status | grep -m 1 '"IsMasternodeListSynced": true'; do sleep 1 ; done > /dev/null 2>&1
