@@ -30,7 +30,7 @@ installNewWallet() {
     echo && echo 'Installing new wallet'
     cd /usr/bin
     sudo rm -rf nihilod nihilo-cli nihilo-tx
-    cd ~/Nihilo_Command_Line_Binaries_Linux_1_0_2
+    cd
     sudo mv nihilod nihilo-cli nihilo-tx /usr/bin
 }
 
