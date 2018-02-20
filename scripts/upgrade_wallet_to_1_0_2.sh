@@ -21,7 +21,7 @@ downloadNewWallet() {
     #Download new wallet
     echo && echo 'Downloading new wallet'
     wget https://github.com/nihilocoin/nihilo/releases/download/1.0.2/Nihilo_Command_Line_Binaries_Linux_1_0_2.tar.gz
-    tar -xf Nihilo_Command_Line_Binaries_Linux_1_0_1.tar.gz
+    tar -xf Nihilo_Command_Line_Binaries_Linux_1_0_2.tar.gz
     echo -e "${GREEN}* Done${NONE}"; 
 }
 
@@ -30,7 +30,7 @@ installNewWallet() {
     echo && echo 'Installing new wallet'
     cd /usr/bin
     sudo rm -rf nihilod nihilo-cli nihilo-tx
-    cd ~/Nihilo_Command_Line_Binaries_Linux_1_0_1
+    cd ~/Nihilo_Command_Line_Binaries_Linux_1_0_2
     sudo mv nihilod nihilo-cli nihilo-tx /usr/bin
 }
 
