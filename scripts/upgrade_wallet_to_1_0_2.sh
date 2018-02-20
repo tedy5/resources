@@ -20,7 +20,7 @@ shutDownWallet() {
 downloadNewWallet() {
     #Download new wallet
     echo && echo 'Downloading new wallet'
-    wget https://github.com/nihilocoin/nihilo/releases/download/1.0.1/Nihilo_Command_Line_Binaries_Linux_1_0_1.tar.gz
+    wget https://github.com/nihilocoin/nihilo/releases/download/1.0.2/Nihilo_Command_Line_Binaries_Linux_1_0_2.tar.gz
     tar -xf Nihilo_Command_Line_Binaries_Linux_1_0_1.tar.gz
     echo -e "${GREEN}* Done${NONE}"; 
 }
