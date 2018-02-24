@@ -141,7 +141,13 @@ configureWallet() {
     mnip=$(curl --silent ipinfo.io/ip)
     rpcuser=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
     rpcpass=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
+    
     mnkey=$($COINCLI masternode genkey)
+    
+    while [ ${#mnkey} != 51 ] 
+    do
+        mnkey=$($COINCLI masternode genkey)
+    done
 
     $COINCLI stop > /dev/null 2>&1
     sleep 10
