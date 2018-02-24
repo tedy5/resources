@@ -55,7 +55,7 @@ masternode1 [ip address]:[port] [private key] tx index
 ## Windows Setup
 Now that we are done with the **Linux VPS** part we can finish the **masternode** setup on the **Windows Wallet**.
 
-Let's start by opening the **Windows Wallet** and let it finish syncing. If you didn't download the wallet yet, you can do so by going to the **[releases on the main source repository](link-to-releases)** and download the latest **Windows QT Wallet**.
+Let's start by opening the **Windows Wallet** and let it finish syncing. If you didn't download the wallet yet, you can do so by going to the **[releases on the main source repository](https://github.com/nihilocoin/nihilo/releases/tag/1.0.2)** and download the latest **Windows QT Wallet**.
 
 ### Activate required options
 Go to the wallet's top menu and select **``Settings``** and then **``Options``**.
