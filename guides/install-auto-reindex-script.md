@@ -10,7 +10,6 @@ In order to install it you need to login into your **VPS** using **putty** or wh
 
 ````bash
 wget https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/install_auto_reindex.sh
-sudo chmod 755 install_auto_reindex.sh
 bash install_auto_reindex.sh
 ````
 
