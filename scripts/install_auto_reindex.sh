@@ -26,7 +26,7 @@ setupCronTab() {
 }
 
 echo -e "${BOLD}"
-read -p "This script will upgrade your Nihilo Wallet to version 1.0.2 . Do you wish to continue? (y/n)?" response
+read -p "This script will install an auto reindexing script that will check if your wallets block heigh matches the explorer block height. Do you wish to continue? (y/n)?" response
 echo -e "${NONE}"
 
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
