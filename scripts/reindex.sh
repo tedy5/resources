@@ -1,11 +1,10 @@
 #!/bin/bash
-#
 
-# tool paths
+# wallet and daemon path
 cli='nihilo-cli'
 daemon='nihilod'
 
-# data dir
+# core dir
 data="~/.nihilocore"
 
 # api url
