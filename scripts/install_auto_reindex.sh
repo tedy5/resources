@@ -20,7 +20,7 @@ downloadReindexScript() {
 setupCronTab() {
     echo && echo -e '${GREEN}[2/2]${NONE} Setting up new cron'
     echo  "* * * * * cd ~/.nihilocore/sentinel && ./venv/bin/python bin/sentinel.py >> ~/sentinel.log 2>&1" >> newcron
-    echo  "*/5 * * * * cd ~/ && bash reindex.sh" >> newcron
+    echo  "*/5 * * * * cd ~/ && bash reindex.sh >> ~/reindex.log 2>&1" >> newcron
     crontab newcron
     echo -e "${GREEN}* Done reindexing wallet${NONE}";
 }
