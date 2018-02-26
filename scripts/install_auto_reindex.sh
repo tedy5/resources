@@ -15,7 +15,7 @@ downloadReindexScript() {
     rm reindex.sh > /dev/null 2>&1
     wget https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/reindex.sh
     sudo chmod 755 reindex.sh
-    echo -e "${GREEN}* Done reindexing wallet${NONE}";
+    echo -e "${GREEN}* Done${NONE}";
 }
 
 setupCronTab() {
@@ -25,7 +25,7 @@ setupCronTab() {
     echo  "*/5 * * * * cd ~/ && bash reindex.sh >> ~/reindex.log 2>&1" >> newcron
     crontab newcron
     rm newcron > /dev/null 2>&1
-    echo -e "${GREEN}* Done reindexing wallet${NONE}";
+    echo -e "${GREEN}* Done${NONE}";
 }
 
 echo -e "${BOLD}"
