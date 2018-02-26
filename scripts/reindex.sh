@@ -27,6 +27,9 @@ if (( api_blocks > local_blocks )); then
         rm -rf ${data}/{governance.dat,netfulfilled.dat,peers.dat,blocks,mncache.dat,chainstate,fee_estimates.dat,mnpayments.dat,banlist.dat}
         sleep 1
         ${daemon} -daemon -reindex
+
+        echo "$(date) - Reindexed wallet from block height ${local_blocks} to match explorer block height ${api_blocks}";
+
         exit 1
 else
         exit 0
