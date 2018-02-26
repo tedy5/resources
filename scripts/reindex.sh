@@ -11,7 +11,7 @@ data="~/.nihilocore"
 api_url='http://172.104.246.158/api/getblockcount'
 
 # check if already reindex process is still active
-if ! $cli mnsync status | grep -m 1 '"AssetID": 999'; then
+if ! $cli mnsync status | grep -m 1 '"AssetID": 999' > /dev/null 2>&1; then
     exit 1
 fi
 
