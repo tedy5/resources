@@ -12,16 +12,19 @@ UNDERLINE='\033[4m'
 downloadReindexScript() {
     echo && echo -e '${GREEN}[1/2]${NONE} Downloading auto reindex script'
     cd
+    rm reindex.sh > /dev/null 2>&1
     wget https://raw.githubusercontent.com/nihilocoin/resources/master/scripts/reindex.sh
     sudo chmod 755 reindex.sh
     echo -e "${GREEN}* Done reindexing wallet${NONE}";
 }
 
 setupCronTab() {
+    rm newcron > /dev/null 2>&1
     echo && echo -e '${GREEN}[2/2]${NONE} Setting up new cron'
     echo  "* * * * * cd ~/.nihilocore/sentinel && ./venv/bin/python bin/sentinel.py >> ~/sentinel.log 2>&1" >> newcron
     echo  "*/5 * * * * cd ~/ && bash reindex.sh >> ~/reindex.log 2>&1" >> newcron
     crontab newcron
+    rm newcron > /dev/null 2>&1
     echo -e "${GREEN}* Done reindexing wallet${NONE}";
 }
 
@@ -33,7 +36,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
     downloadReindexScript
     setupCronTab
     
-    echo && echo -e "${BOLD}New wallet was installed successfully. If you had NEW_START_REQUIRED status before running this script, go to your Cold Wallet and click Start Alias, if not then you're good to go!${NONE}".
+    echo && echo -e "${BOLD}Auto reindexing script and cron was installed successfully.${NONE}".
 else
     echo && echo "Installation cancelled" && echo
 fi
