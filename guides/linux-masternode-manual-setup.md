@@ -226,7 +226,7 @@ watch nihilo-cli mnsync status
 :white_check_mark: **Great**, now everything is ready on our **Linux VPS**, type the following command to receive the line that you will need in order to finish the **Windows** part.
 
 ````bash
-echo "masternode1 ${mnip}:12875 ${mnkey} tx index"
+echo "masternode1 ${mnip}:13535 ${mnkey} tx index"
 ````
 
 **Save** this line somewhere on your pc and continue with the **[Windows part of the setup here](./masternode-windows-cold-wallet-with-linux-vps.md#windows-setup)**.
